@@ -9,7 +9,7 @@ const app = express();
 
 const PORT = process.env.PORT || 3001;
 
-const noteData = require('./db/db.json');
+const notes = require('./db/db.json');
 
 // Parses incoming string or array data
 app.use(express.urlencoded({ extended: true }));
@@ -21,7 +21,7 @@ app.use(express.static("public"));
 
 // GET /api/notes should read the db.json file and return all saved notes as JSON.
 app.get('/api/notes', (req, res) => {
-    res.json(noteData);
+    res.json(notes);
 });
 
 
