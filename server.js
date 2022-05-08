@@ -38,7 +38,7 @@ app.post('/api/notes', (req, res) => {
 
 // GET /notes should return the notes.html file.
 app.get('/notes', (req, res) => {
-
+    res.sendFile(__dirname + '/public/notes.html');
 })
 
 
