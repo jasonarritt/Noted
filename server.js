@@ -44,7 +44,7 @@ app.get('/notes', (req, res) => {
 
 // GET * should return the index.html file.
 app.get('*', (req, res) => {
-    
+    res.sendFile(__dirname + '/public/index.html');
 })
 
 
